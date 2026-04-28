@@ -1,0 +1,4 @@
+/*! Copyright 2026 Adobe
+All Rights Reserved. */
+import"@dropins/tools/event-bus.js";import{g as C}from"./getStoreConfig.js";import{useState as n,useEffect as S}from"@dropins/tools/preact-hooks.js";const m=()=>{const[i,r]=n(null),[g,c]=n(null),e=t=>{const{minLength:o,requiredCharacterClasses:s,shoppingAssistanceEnabled:a,shoppingAssistanceCheckboxTitle:f,shoppingAssistanceCheckboxTooltip:p}=t;r({minLength:o,requiredCharacterClasses:s}),c({shoppingAssistanceEnabled:a,shoppingAssistanceCheckboxTitle:f,shoppingAssistanceCheckboxTooltip:p})};return S(()=>{const t=sessionStorage.getItem("accountStoreConfig"),o=t?JSON.parse(t):null;if(o){e(o);return}C().then(s=>{s&&(sessionStorage.setItem("accountStoreConfig",JSON.stringify(s)),e(s))})},[]),{passwordConfigs:i,remoteShoppingAssistanceConfigs:g}};export{m as u};
+//# sourceMappingURL=useGetStoreConfigs.js.map
